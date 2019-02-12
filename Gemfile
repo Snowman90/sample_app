@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker', '~> 1.9.1'
+# gem 'ovirt-engine-sdk', '~> 4.3.0'
+gem 'carrierwave', '~> 0.11.2'
+gem "mini_magick"
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
@@ -41,7 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
 end
 
 group :development do
@@ -68,6 +71,7 @@ end
 
 group :production do
   gem 'pg', '~> 0.20.0'
+  # gem 'fog', '~> 1.38'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
